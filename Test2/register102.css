@@ -1,0 +1,108 @@
+/* Reset margin, padding và box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nền và hiệu ứng fade-in */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Phần chứa form */
+.container {
+    background: #e4e0e0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInContainer 1s ease-out forwards 0.5s;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input và Select */
+input[type="text"], input[type="password"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Focus hiệu ứng */
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Nút */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2575fc;;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover nút */
+button:hover {
+    background-color: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng liên kết */
+a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover liên kết */
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Đảm bảo body và html chiếm toàn bộ màn hình */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #007bff;
+    color: white; /* Màu nền khi hover */
+}
+
+.content {
+    margin-left: 260px; /* Khoảng cách chừa cho sidebar */
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Chiều cao tối thiểu */
+    box-sizing: border-box;
+}
+
+.content table {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    border-collapse: collapse; /* Gộp đường viền */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    margin-top: 20px;
+}
+
+.content th, .content td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Đường viền */
+}
+
+.content th {
+    background-color: #333; /* Nền đen */
+    color: white; /* Chữ trắng */
+    text-transform: uppercase; /* Viết hoa */
+}
+
+.content tr:nth-child(even) {
+    background-color: #f9f9f9; /* Màu nền khác nhau cho hàng chẵn */
+}
+
+.content tr:hover {
+    background-color: #f1f1f1; /* Nền đổi màu khi hover */
+}
+
+.content caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}

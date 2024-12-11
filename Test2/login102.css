@@ -1,0 +1,114 @@
+/* Reset margin, padding và box-sizing để giao diện đồng nhất */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thêm nền cho toàn bộ body với gradient và hiệu ứng fade-in */
+body {
+    font-family: Arial, sans-serif;
+    background-image: white;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-out; /* Hiệu ứng fade-in cho toàn bộ trang */
+}
+
+.login-container {
+    background: #e4e0e0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;  /* Bắt đầu với opacity = 0 */
+    animation: fadeInContainer 1s ease-out forwards 0.5s; /* Hiệu ứng fade-in cho container */
+}
+
+/* Tiêu đề đăng nhập */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Định dạng input text và password */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Thay đổi border màu khi input được focus */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Định dạng cho nút đăng nhập */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #2575fc;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng nhấn */
+}
+
+/* Hiệu ứng khi hover vào nút đăng nhập */
+button:hover {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+/* Định dạng cho liên kết đăng ký */
+.register-link {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover vào liên kết đăng ký */
+.register-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Thay đổi màu khi hover */
+}
+
+/* Khoảng cách giữa form đăng nhập và các phần tử khác */
+.form-container {
+    margin-top: 20px;
+}
+
+/* Hiệu ứng fade-in cho trang khi vào */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hiệu ứng fade-in cho phần login-container */
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
